@@ -41,7 +41,7 @@ drwxr-xr-x 2 runner docker 4096 [date] .github
 Run these commands to understand the current state:
 ```bash
 # List all files (excluding .git)
-find . -type f ! -path "./.git/*" | grep -v ".git"
+find . -type f -not -path "./.git/*"
 
 # Check repository history
 git --no-pager log --oneline -10
